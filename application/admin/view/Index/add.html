@@ -1,0 +1,131 @@
+{include file="public/header"}
+<style type="text/css" media="screen">
+.h{
+	width: 100%;
+}
+.h_h3{
+	text-align: center;
+	font-weight: bold;
+}
+.img1{
+	width: 100px;
+	height: 100px;
+}
+.img1 img{
+	width: 100%;
+	height: 100%;
+}
+.dis{
+	display: flex;
+}
+.menu{
+	margin-top:30px;
+	width: 100%;
+	display: flex;
+	justify-content:space-around; 
+	align-items:baseline ;
+}
+.menu_1{
+	display: flex;
+	align-items:baseline ;
+}
+.menu_2{
+	margin-right: 20px;
+}
+.sel{
+	width: 160px;
+	height: 40px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #ccc;
+	position: relative;
+}
+.sel select{
+	border: none;
+	outline: none;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	padding-left: 60px;
+}
+.sel:after{
+	content: "";
+	width: 14px;
+	height: 8px;
+	position: absolute;
+	right: 20px;
+	top: 45%;
+	pointer-events: none;
+}
+</style>
+<div class="container">
+	<div class="h">
+		<h3 class="h_h3">添加上传图片</h3>
+	</div>
+
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">图片标题 ：</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" name="title"></input>
+			</div>
+		</div>
+		<div class="menu_1 form-group">
+			<label class="col-sm-2 control-label">图片内容 ：</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" name="title"></input>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">图片选择 ：</label>
+			<div>
+				<input type="file" name="file" class="col-sm-4">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">图片预览 ：</label>
+			<div class="col-sm-10 dis">
+				<div class="img1">
+					<img src="__PUBLIC__/static/admin/avatar2.jpg" alt="">
+				</div>
+				<div class="img1">
+					<img src="__PUBLIC__/static/admin/avatar2.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="menu_1 form-group">
+			<label class="menu_2 col-sm-2 control-label">选择上传列表:</label>
+			<div class="sel">
+				<select>
+					<option>列表1</option>
+					<option>列表2</option>
+					<option>列表3</option>
+					<option>列表4</option>
+				</select>
+			</div>
+		</div>
+		<div class="menu_1 form-group">
+			<label class="menu_2 col-sm-2 control-label">是否显示:</label>
+			<div class="sel">
+				<select>
+					<option>是</option>
+					<option>否</option>
+				</select>
+			</div>
+		</div>
+		<div class="menu_1 form-group">
+			<label class="menu_2 col-sm-2 control-label">是否轮播:</label>
+			<div class="sel">
+				<select>
+					<option>是</option>
+					<option>否</option>
+				</select>
+			</div>
+		</div>
+	</form>
+</div>
+</div>
+
+{include file="public/footer"}
